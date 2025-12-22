@@ -1,6 +1,6 @@
 import {
   isPlatformBrowser
-} from "./chunk-66YQYHPL.js";
+} from "./chunk-5NVHAWJD.js";
 import {
   APP_ID,
   ApplicationRef,
@@ -33,8 +33,6 @@ import {
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
-  __spreadProps,
-  __spreadValues,
   afterNextRender,
   animationFrameScheduler,
   asapScheduler,
@@ -82,7 +80,11 @@ import {
   ɵɵqueryRefresh,
   ɵɵstyleProp,
   ɵɵviewQuery
-} from "./chunk-RJSRV2M5.js";
+} from "./chunk-B6XIY5I7.js";
+import {
+  __spreadProps,
+  __spreadValues
+} from "./chunk-GOMI4DH3.js";
 
 // node_modules/@angular/cdk/fesm2022/_shadow-dom-chunk.mjs
 var shadowDomIsSupported;
