@@ -1,0 +1,377 @@
+/* ====================================
+   Elite DevOps Portfolio - Animations
+   Custom keyframes and effects
+   ==================================== */
+
+/* ===== Terminal Cursor Blink ===== */
+@keyframes cursor-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: cursor-blink 1060ms step-end infinite;
+}
+
+/* ===== Typing Effect ===== */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent-green);
+  animation: 
+    typing 2s steps(40, end),
+    cursor-blink 1060ms step-end infinite;
+}
+
+/* ===== Glitch Effect ===== */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch-hover:hover {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ===== Window Animations ===== */
+@keyframes window-open {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes window-close {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+}
+
+@keyframes window-minimize {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translateY(100vh);
+  }
+}
+
+@keyframes window-maximize {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.window-enter {
+  animation: window-open var(--duration-normal) var(--ease-out);
+}
+
+.window-exit {
+  animation: window-close var(--duration-fast) var(--ease-in);
+}
+
+.window-minimize-anim {
+  animation: window-minimize var(--duration-normal) var(--ease-in);
+}
+
+.window-maximize-anim {
+  animation: window-maximize var(--duration-fast) var(--ease-out);
+}
+
+/* ===== Desktop Icon Slide Up ===== */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up var(--duration-slow) var(--ease-out);
+}
+
+/* Staggered delay for multiple icons */
+.slide-up:nth-child(1) { animation-delay: 0ms; }
+.slide-up:nth-child(2) { animation-delay: 100ms; }
+.slide-up:nth-child(3) { animation-delay: 200ms; }
+.slide-up:nth-child(4) { animation-delay: 300ms; }
+.slide-up:nth-child(5) { animation-delay: 400ms; }
+.slide-up:nth-child(6) { animation-delay: 500ms; }
+.slide-up:nth-child(7) { animation-delay: 600ms; }
+
+/* ===== Taskbar Slide Up ===== */
+@keyframes taskbar-slide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.taskbar-enter {
+  animation: taskbar-slide var(--duration-slow) var(--ease-out);
+  animation-delay: 200ms;
+  animation-fill-mode: both;
+}
+
+/* ===== Fade In/Out ===== */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in var(--duration-normal) var(--ease-out);
+}
+
+.fade-out {
+  animation: fade-out var(--duration-fast) var(--ease-in);
+}
+
+/* ===== Glow Pulse ===== */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* ===== Scanline Effect ===== */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.scanline-bg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 65, 0.03) 0px,
+    rgba(0, 255, 65, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: var(--z-tooltip);
+  opacity: var(--scanline-opacity);
+}
+
+.scanline-animated::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 255, 65, 0.1) 50%,
+    transparent 100%
+  );
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: var(--z-tooltip);
+}
+
+/* ===== Button Hover Lift ===== */
+@keyframes lift {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 65, 0.3);
+  }
+}
+
+.btn-lift:hover {
+  animation: lift var(--duration-fast) var(--ease-out) forwards;
+}
+
+/* ===== Loading Spinner ===== */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border-primary);
+  border-top-color: var(--accent-green);
+  border-radius: var(--radius-full);
+  animation: spin 0.8s linear infinite;
+}
+
+/* ===== Progress Bar ===== */
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--accent-green);
+  animation: progress 2s ease-out forwards;
+}
+
+/* ===== Scale Pop ===== */
+@keyframes scale-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale-pop:active {
+  animation: scale-pop 0.2s ease-out;
+}
+
+/* ===== Shake (Error) ===== */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-4px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* ===== Reduced Motion Support ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .scanline-animated::after,
+  .glow-pulse,
+  .cursor-blink {
+    animation: none !important;
+  }
+}
+
+/* ===== CRT Screen Effect (Subtle) ===== */
+.crt-effect {
+  position: relative;
+}
+
+.crt-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+  z-index: var(--z-tooltip);
+}
