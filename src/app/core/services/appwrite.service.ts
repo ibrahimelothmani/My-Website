@@ -23,7 +23,11 @@ export class AppwriteService {
     this.client = new Client();
     
     // Check if Appwrite is configured
-    if (environment.appwrite.endpoint && environment.appwrite.endpoint !== 'YOUR_APPWRITE_ENDPOINT') {
+    if (environment.appwrite.endpoint && 
+        environment.appwrite.projectId && 
+        environment.appwrite.databaseId &&
+        environment.appwrite.endpoint.trim() !== '' &&
+        environment.appwrite.projectId.trim() !== '') {
       this.client
         .setEndpoint(environment.appwrite.endpoint)
         .setProject(environment.appwrite.projectId);
@@ -32,7 +36,7 @@ export class AppwriteService {
       this.account = new Account(this.client);
       this.isConfigured = true;
     } else {
-      console.warn('Appwrite is not configured. Please update environment.ts with your Appwrite credentials.');
+      console.warn('Appwrite is not configured. Please set environment variables (APPWRITE_ENDPOINT, APPWRITE_PROJECT_ID, APPWRITE_DATABASE_ID) in your .env file.');
       // Initialize with dummy values to prevent errors
       this.databases = {} as Databases;
       this.account = {} as Account;

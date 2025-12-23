@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   appwrite: {
-    endpoint: 'https://cloud.appwrite.io/v1',
-    projectId: 'YOUR_ACTUAL_PROJECT_ID',
-    databaseId: 'YOUR_ACTUAL_DATABASE_ID',
+    endpoint: 'https://fra.cloud.appwrite.io/v1',
+    projectId: '694a3f1c0012215d80a9',
+    databaseId: '694a3f4a001295df9d13',
     collectionsId: {
-      messages: 'YOUR_MESSAGES_COLLECTION_ID'
+      messages: '694a5bd4002f31e28bf8'
     }
   },
   app: {
