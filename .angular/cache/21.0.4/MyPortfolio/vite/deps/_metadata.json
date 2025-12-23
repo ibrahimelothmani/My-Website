@@ -1,49 +1,49 @@
 {
-  "hash": "ca2bd13e",
+  "hash": "526a57de",
   "configHash": "d89cb9d7",
-  "lockfileHash": "261c899d",
-  "browserHash": "2c7244e6",
+  "lockfileHash": "f5227ab7",
+  "browserHash": "9806e527",
   "optimized": {
     "@angular/cdk/drag-drop": {
       "src": "../../../../../../node_modules/@angular/cdk/fesm2022/drag-drop.mjs",
       "file": "@angular_cdk_drag-drop.js",
-      "fileHash": "4743d02b",
+      "fileHash": "f3c8bf83",
       "needsInterop": false
     },
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "0216c789",
+      "fileHash": "e119d8b7",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "3fbf1ab6",
-      "needsInterop": false
-    },
-    "@angular/platform-browser": {
-      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
-      "file": "@angular_platform-browser.js",
-      "fileHash": "1b553ff3",
-      "needsInterop": false
-    },
-    "@angular/router": {
-      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
-      "file": "@angular_router.js",
-      "fileHash": "1bd28b91",
+      "fileHash": "361e8e71",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "41dfcf73",
+      "fileHash": "6ee8265d",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "d24c5628",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "3c8e8826",
       "needsInterop": false
     },
     "appwrite": {
       "src": "../../../../../../node_modules/appwrite/dist/esm/sdk.js",
       "file": "appwrite.js",
-      "fileHash": "0deaee6c",
+      "fileHash": "bf78c466",
       "needsInterop": false
     }
   },

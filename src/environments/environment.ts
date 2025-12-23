@@ -1,20 +1,16 @@
 export const environment = {
   production: false,
   appwrite: {
-    endpoint: 'YOUR_APPWRITE_ENDPOINT', // e.g., https://cloud.appwrite.io/v1
-    projectId: 'YOUR_APPWRITE_PROJECT_ID',
-    databaseId: 'YOUR_DATABASE_ID',
+    endpoint: 'https://fra.cloud.appwrite.io/v1',
+    projectId: '694a3f1c0012215d80a9',
+    databaseId: '694a3f4a001295df9d13',
     collectionsId: {
-      messages: 'YOUR_MESSAGES_COLLECTION_ID',
-      experiences: 'YOUR_EXPERIENCES_COLLECTION_ID',
-      projects: 'YOUR_PROJECTS_COLLECTION_ID',
-      skills: 'YOUR_SKILLS_COLLECTION_ID',
-      certifications: 'YOUR_CERTIFICATIONS_COLLECTION_ID',
+      messages: '694a5bd4002f31e28bf8'
     }
   },
   app: {
     name: 'Ibrahim El Othmani - DevOps OS',
-    version: '2024.12',
+    version: '2025.12',
     author: 'Ibrahim El Othmani',
   },
 };
