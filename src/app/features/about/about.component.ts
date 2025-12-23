@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
           </div>
           <div class="info-row">
             <span class="key text-green">OS:</span>
-            <span class="value">DevOps Engineer v2024</span>
+            <span class="value">DevOps Engineer</span>
           </div>
           <div class="info-row">
             <span class="key text-green">Host:</span>

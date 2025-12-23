@@ -8,6 +8,7 @@ import { AboutComponent } from '../../../features/about/about.component';
 import { ExperienceComponent } from '../../../features/experience/experience.component';
 import { ProjectsComponent } from '../../../features/projects/projects.component';
 import { SkillsComponent } from '../../../features/skills/skills.component';
+import { EducationComponent } from '../../../features/education/education.component';
 import { CertificationsComponent } from '../../../features/certifications/certifications.component';
 import { TerminalComponent } from '../../../features/terminal/terminal.component';
 import { ContactComponent } from '../../../features/contact/contact.component';
@@ -22,6 +23,7 @@ import { ContactComponent } from '../../../features/contact/contact.component';
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
+    EducationComponent,
     CertificationsComponent,
     TerminalComponent,
     ContactComponent
@@ -77,6 +79,9 @@ import { ContactComponent } from '../../../features/contact/contact.component';
           }
           @case ('skills') {
             <app-skills></app-skills>
+          }
+          @case ('education') {
+            <app-education></app-education>
           }
           @case ('certifications') {
             <app-certifications></app-certifications>

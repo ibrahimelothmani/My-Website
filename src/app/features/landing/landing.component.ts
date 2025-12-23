@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common';
               <span class="text-green mono">$</span> whoami
             </h1>
             <h2 class="name">Ibrahim El Othmani</h2>
-            <p class="role text-blue">Full Stack / DevOps/Cloud Engineer</p>
+            <p class="role text-blue">DevOps/Cloud Engineer</p>
             <p class="company text-secondary">💼 Open to Work | Remote Available</p>
 
             <div class="location-badge">

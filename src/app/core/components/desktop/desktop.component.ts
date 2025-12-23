@@ -16,8 +16,7 @@ import { LandingComponent } from '../../../features/landing/landing.component';
       <!-- Left Sidebar Navigation -->
       <aside class="sidebar" [class.sidebar-hidden]="!sidebarVisible()" role="navigation" aria-label="Main Navigation">
         <div class="sidebar-header">
-          <h2 class="mono text-green">DevOps OS</h2>
-          <p class="sidebar-subtitle text-secondary">v2024.12</p>
+          <h2 class="mono text-green">DevOps & Cloud</h2>
         </div>
         
         <nav class="sidebar-menu">
@@ -70,7 +69,7 @@ import { LandingComponent } from '../../../features/landing/landing.component';
       <!-- Boot Message (fades out after 2s) -->
       @if (showBootMessage()) {
         <div class="boot-message fade-in">
-          <span class="mono text-green">devops-os v2024.12 initialized...</span>
+          <span class="mono text-green">devops-os initialized...</span>
         </div>
       }
     </div>
@@ -457,9 +456,10 @@ export class DesktopComponent {
     { id: 'experience', label: 'Experience.app', emoji: '💼' },
     { id: 'projects', label: 'Projects.app', emoji: '🚀' },
     { id: 'skills', label: 'Skills.app', emoji: '⚡' },
+    { id: 'education', label: 'Education.app', emoji: '🎓' },
     { id: 'certifications', label: 'Certifications.app', emoji: '🏆' },
-    { id: 'terminal', label: 'Terminal.app', emoji: '💻' },
-    { id: 'contact', label: 'Contact.app', emoji: '📧' },
+    { id: 'terminal', label: 'Terminal.sh', emoji: '💻' },
+    { id: 'contact', label: 'Contact.md', emoji: '📧' },
   ];
 
   constructor(public windowManagerService: WindowManagerService) {

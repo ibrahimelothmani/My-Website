@@ -25,6 +25,7 @@ export class WindowManagerService {
     experience: 'Work Experience',
     projects: 'DevOps Projects',
     skills: 'Technology Stack',
+    education: 'Education & Training',
     certifications: 'Certifications',
     terminal: 'DevOps Terminal',
     contact: 'Contact Me',

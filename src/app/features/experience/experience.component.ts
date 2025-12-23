@@ -274,7 +274,7 @@ export class ExperienceComponent {
       id: '2',
       company: 'IBH Ibn Alhaytham',
       role: 'DevOps Engineer (Intern)',
-      duration: 'August 2024 - October  2024',
+      duration: 'August 2024 - October 2024',
       technologies: ['Docker', 'Kubernetes', 'Jenkins', 'Git', 'Linux', 'Bash', 'Prometheus', 'Grafana'],
       responsibilities: [
         'Implemented Docker containerization for microservices applications',
@@ -288,48 +288,6 @@ export class ExperienceComponent {
         { label: '📦 Containerized Apps', value: '5+' },
         { label: '⏱️ Duration', value: '3 months' },
         { label: '🎓 Learning', value: 'Hands-on' }
-      ],
-      expanded: false
-    },
-    {
-      id: '3',
-      company: '2i Formation',
-      role: 'Full Stack & DevOps/Cloud Training',
-      duration: '2023 - 2024',
-      technologies: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Spring Boot', 'Angular', 'Java', 'Python'],
-      responsibilities: [
-        'Completed intensive training in cloud platforms (AWS, Azure)',
-        'Gained hands-on experience with Kubernetes and Docker orchestration',
-        'Learned Infrastructure as Code using Terraform and Ansible',
-        'Built full-stack applications with Spring Boot and Angular',
-        'Mastered CI/CD pipelines and DevOps workflows',
-        'Completed multiple real-world DevOps projects from scratch'
-      ],
-      metrics: [
-        { label: '📚 Program', value: 'Professional' },
-        { label: '⏱️ Duration', value: '1 year' },
-        { label: '🎯 Skills', value: 'Full Stack + DevOps' }
-      ],
-      expanded: false
-    },
-    {
-      id: '4',
-      company: 'University',
-      role: 'Civil Engineering Degree',
-      duration: '2020',
-      technologies: [],
-      responsibilities: [
-        'Graduated with B.Sc. in Civil Engineering',
-        'Developed strong analytical and problem-solving capabilities',
-        'Gained project planning and management experience',
-        'Recognized the potential of tech and automation',
-        'Decided to transition career from civil to software engineering',
-        'Applied engineering principles to infrastructure design'
-      ],
-      metrics: [
-        { label: '🎓 Degree', value: 'B.Sc.' },
-        { label: '📐 Field', value: 'Civil Eng.' },
-        { label: '💡 Pivot', value: 'To Tech' }
       ],
       expanded: false
     }

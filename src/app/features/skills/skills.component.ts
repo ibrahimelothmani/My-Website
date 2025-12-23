@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 interface Skill {
   name: string;
   category: string;
-  proficiency: number; // 1-5
-  yearsExperience: number;
 }
 
 interface SkillCategory {
@@ -29,20 +27,9 @@ interface SkillCategory {
               <span class="text-blue">{{ category.name }}</span>
             </h3>
             
-            <div class="skills-grid">
+            <div class="skills-badges">
               @for (skill of category.skills; track skill.name) {
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">{{ skill.name }}</span>
-                    <span class="skill-years text-secondary">({{ skill.yearsExperience }}y)</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-fill" [style.width.%]="skill.proficiency * 20"></div>
-                  </div>
-                  <div class="skill-level text-sm">
-                    {{ getProficiencyLabel(skill.proficiency) }}
-                  </div>
-                </div>
+                <span class="skill-badge">{{ skill.name }}</span>
               }
             </div>
           </div>
@@ -53,6 +40,9 @@ interface SkillCategory {
   styles: [`
     .skills-container {
       color: var(--text-primary);
+      padding: var(--space-6);
+      height: 100%;
+      overflow-y: auto;
     }
 
     .page-title {
@@ -65,7 +55,7 @@ interface SkillCategory {
     .categories-list {
       display: flex;
       flex-direction: column;
-      gap: var(--space-8);
+      gap: var(--space-6);
     }
 
     .category-section {
@@ -80,7 +70,7 @@ interface SkillCategory {
       align-items: center;
       gap: var(--space-3);
       font-size: var(--font-size-xl);
-      margin-bottom: var(--space-5);
+      margin-bottom: var(--space-4);
       padding-bottom: var(--space-3);
       border-bottom: 1px solid var(--border-primary);
     }
@@ -89,64 +79,38 @@ interface SkillCategory {
       font-size: var(--font-size-2xl);
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: var(--space-4);
-    }
-
-    .skill-item {
-      padding: var(--space-4);
-      background: var(--bg-primary);
-      border: 1px solid var(--border-inactive);
-      border-radius: var(--radius-md);
-      transition: all var(--duration-fast) var(--ease-out);
-    }
-
-    .skill-item:hover {
-      border-color: var(--accent-green);
-      transform: translateY(-2px);
-    }
-
-    .skill-header {
+    .skills-badges {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: var(--space-2);
+      flex-wrap: wrap;
+      gap: var(--space-3);
     }
 
-    .skill-name {
-      font-weight: var(--font-weight-semibold);
+    .skill-badge {
+      padding: var(--space-3) var(--space-4);
+      background: var(--bg-primary);
+      border: 1px solid var(--accent-green);
+      border-radius: var(--radius-md);
       font-size: var(--font-size-base);
+      font-weight: var(--font-weight-medium);
+      color: var(--accent-green);
+      transition: all var(--duration-fast) var(--ease-out);
+      cursor: default;
     }
 
-    .skill-years {
-      font-size: var(--font-size-xs);
-    }
-
-    .skill-bar {
-      height: 8px;
-      background: var(--bg-tertiary);
-      border-radius: var(--radius-full);
-      overflow: hidden;
-      margin-bottom: var(--space-2);
-    }
-
-    .skill-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
-      border-radius: var(--radius-full);
-      transition: width var(--duration-slow) var(--ease-out);
-    }
-
-    .skill-level {
-      text-align: right;
-      color: var(--text-secondary);
+    .skill-badge:hover {
+      background: rgba(0, 255, 65, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 255, 65, 0.2);
     }
 
     @media (max-width: 768px) {
-      .skills-grid {
-        grid-template-columns: 1fr;
+      .skills-container {
+        padding: var(--space-4);
+      }
+
+      .skill-badge {
+        font-size: var(--font-size-sm);
+        padding: var(--space-2) var(--space-3);
       }
     }
   `]
@@ -157,68 +121,97 @@ export class SkillsComponent {
       name: 'Cloud Platforms',
       icon: '☁️',
       skills: [
-        { name: 'AWS', category: 'cloud', proficiency: 2, yearsExperience: 1 },
-        { name: 'Azure', category: 'cloud', proficiency: 2, yearsExperience: 1 },
+        { name: 'AWS', category: 'cloud' },
+        { name: 'Azure', category: 'cloud' },
       ]
     },
     {
       name: 'Infrastructure as Code',
       icon: '🏗️',
       skills: [
-        { name: 'Terraform', category: 'iac', proficiency: 2, yearsExperience: 1 },
-        { name: 'Ansible', category: 'iac', proficiency: 2, yearsExperience: 1 },
-        { name: 'CloudFormation', category: 'iac', proficiency: 2, yearsExperience: 1 }
+        { name: 'Terraform', category: 'iac' },
+        { name: 'Ansible', category: 'iac' },
+        { name: 'CloudFormation', category: 'iac' }
       ]
     },
     {
       name: 'Container & Orchestration',
       icon: '🐳',
       skills: [
-        { name: 'Kubernetes', category: 'container', proficiency: 2, yearsExperience: 1 },
-        { name: 'Docker', category: 'container', proficiency: 2, yearsExperience: 1 },
-        { name: 'Helm', category: 'container', proficiency: 2, yearsExperience: 1 }
+        { name: 'Kubernetes', category: 'container' },
+        { name: 'Docker', category: 'container' },
+        { name: 'Helm', category: 'container' }
       ]
     },
     {
       name: 'CI/CD',
       icon: '🔄',
       skills: [
-        { name: 'Jenkins', category: 'cicd', proficiency: 2, yearsExperience: 1 },
-        { name: 'GitHub Actions', category: 'cicd', proficiency: 2, yearsExperience: 1 },
-        { name: 'ArgoCD', category: 'cicd', proficiency: 2, yearsExperience: 1 },
-        { name: 'GitLab CI', category: 'cicd', proficiency: 2, yearsExperience: 1 }
+        { name: 'Jenkins', category: 'cicd' },
+        { name: 'GitHub Actions', category: 'cicd' },
+        { name: 'ArgoCD', category: 'cicd' },
+        { name: 'GitLab CI', category: 'cicd' }
       ]
     },
     {
       name: 'Observability',
       icon: '📊',
       skills: [
-        { name: 'Prometheus', category: 'observability', proficiency: 2, yearsExperience: 1 },
-        { name: 'Grafana', category: 'observability', proficiency: 2, yearsExperience: 1 },
-        { name: 'Loki', category: 'observability', proficiency: 2, yearsExperience: 1 },
-        { name: 'ELK Stack', category: 'observability', proficiency: 2, yearsExperience: 1 }
+        { name: 'Prometheus', category: 'observability' },
+        { name: 'Grafana', category: 'observability' },
+        { name: 'Loki', category: 'observability' },
+        { name: 'ELK Stack', category: 'observability' }
       ]
     },
     {
       name: 'Security & Secrets',
       icon: '🔐',
       skills: [
-        { name: 'HashiCorp Vault', category: 'security', proficiency: 2, yearsExperience: 1 },
-        { name: 'SOPS', category: 'security', proficiency: 2, yearsExperience: 1 }
+        { name: 'HashiCorp Vault', category: 'security' },
+        { name: 'SOPS', category: 'security' }
       ]
     },
     {
       name: 'Programming & Scripting',
       icon: '💻',
       skills: [
-        { name: 'Python', category: 'programming', proficiency: 2, yearsExperience: 1 },
-        { name: 'Bash', category: 'programming', proficiency: 2, yearsExperience: 1 },
+        { name: 'Python', category: 'programming' },
+        { name: 'Bash', category: 'programming' },
+      ]
+    },
+    {
+      name: 'Backend Frameworks',
+      icon: '🔧',
+      skills: [
+        { name: 'Spring Boot', category: 'backend' },
+        { name: 'Symfony', category: 'backend'},
+        { name: 'REST APIs', category: 'backend' },
+      ]
+    },
+    {
+      name: 'Frontend Frameworks',
+      icon: '⚛️',
+      skills: [
+        { name: 'Angular', category: 'frontend' },
+      ]
+    },
+    {
+      name: 'Databases & Caching',
+      icon: '🗄️',
+      skills: [
+        { name: 'PostgreSQL', category: 'database' },
+        { name: 'MySQL', category: 'database' },
+        { name: 'MongoDB', category: 'database' },
+        { name: 'Redis', category: 'caching' },
+      ]
+    },
+    {
+      name: 'Authentication',
+      icon: '🔑',
+      skills: [
+        { name: 'Keycloak', category: 'auth' },
+        { name: 'JWT', category: 'auth'}
       ]
     }
   ]);
-
-  getProficiencyLabel(level: number): string {
-   const labels = ['Beginner', 'Intermediate', 'Advanced', 'Expert', 'Master'];
-    return labels[level - 1] || 'Unknown';
-  }
 }
