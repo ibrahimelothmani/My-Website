@@ -449,7 +449,7 @@ import { LandingComponent } from '../../../features/landing/landing.component';
 })
 export class DesktopComponent {
   showBootMessage = signal(true);
-  sidebarVisible = signal(true);
+  sidebarVisible = signal(false);
 
   desktopIcons = [
     { id: 'about', label: 'About.app', emoji: '👤' },
@@ -479,6 +479,8 @@ export class DesktopComponent {
 
   openApp(appId: string): void {
     this.windowManagerService.openWindow(appId);
+    // Auto-close sidebar after opening an app
+    this.sidebarVisible.set(false);
   }
 
   closeWindow(windowId: string): void {
