@@ -55,12 +55,6 @@ import { ContactComponent } from '../../../features/contact/contact.component';
             <span>─</span>
           </button>
           <button 
-            class="control-btn maximize-btn"
-            (click)="handleMaximize($event)"
-            aria-label="Maximize">
-            <span>{{ windowState.maximized ? '◱' : '□' }}</span>
-          </button>
-          <button 
             class="control-btn close-btn"
             (click)="handleClose($event)"
             aria-label="Close">

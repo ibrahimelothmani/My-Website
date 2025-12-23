@@ -50,7 +50,7 @@ export class WindowManagerService {
       id: appId,
       title: this.appTitles[appId] || appId,
       minimized: false,
-      maximized: false,
+      maximized: true,  // Open windows fullscreen by default
       focused: true,
       zIndex: this.nextZIndex++,
       width: this.getDefaultWidth(appId),

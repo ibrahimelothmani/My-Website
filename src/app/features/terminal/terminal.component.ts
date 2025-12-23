@@ -266,12 +266,13 @@ export class TerminalComponent implements AfterViewInit {
 
   getWhoAmI(): string {
     return `Ibrahim El Othmani
-Cloud & DevOps Engineer @ CloudSynk
-Specializing in: Kubernetes, AWS/Azure, IaC (Terraform/Ansible)
-Location: Tunisia 🇹🇳
-Experience: 3+ years in DevOps & Cloud Engineering
+Full Stack / DevOps/Cloud Engineer
+Specializing in: Kubernetes, Docker, AWS/Azure, IaC (Terraform/Ansible)
+Location: Tunisia 🇹🇳 (Remote Available)
+Experience: 1+ year in DevOps & Cloud Engineering
+Status: 💼 Open to Work
 
-"Automate everything. Monitor relentlessly. Deploy fearlessly."`;
+"From Civil Engineering to Cloud Engineering - Building bridges between code and infrastructure."`;
   }
 
   listFiles(args: string[]): string {
@@ -305,32 +306,47 @@ drwxr-xr-x  3 ibrahim devops   96 Dec 22 10:00 ..
     if (file === 'experience.txt' || file === 'experience') {
       return `Work Experience:
 
-[CloudSynk] Cloud & DevOps Engineer (2023 - Present)
-- Multi-region EKS architecture for microservices
-- GitOps implementation with ArgoCD
-- 60% reduction in deployment time
-- 99.9% uptime achieved
+[Freelance] DevOps/Cloud Engineer (Nov 2024 - Present)
+- Providing DevOps services to international clients
+- Kubernetes, Docker, Terraform, AWS/Azure
+- CI/CD pipelines and infrastructure automation
 
-[NexaCore Solutions] Full-Stack Engineer (2021 - 2022)
-- Angular + Spring Boot applications
-- Docker containerization
-- CI/CD with GitHub Actions`;
+[IBH Ibn Alhaytham] DevOps Engineer Intern (Aug-Oct 2024)
+- Docker containerization for microservices
+- Kubernetes cluster setup and management
+- CI/CD pipeline improvements with Jenkins
+
+[2i Formation] Full Stack & DevOps Training (2023-2024)
+- Professional training in cloud platforms (AWS, Azure)
+- Kubernetes and container orchestration
+- Infrastructure as Code (Terraform, Ansible)
+- Full-stack development (Spring Boot, Angular)
+
+[University] B.Sc. Civil Engineering (2020)
+- Career transition from Civil to Cloud Engineering`;
     }
     
     if (file === 'skills.yaml' || file === 'skills') {
       return `cloud_platforms:
-  - AWS (Expert, 4 years)
-  - Azure (Advanced, 2 years)
-  - GCP (Intermediate, 1 year)
+  - AWS (Intermediate, 1 year)
+  - Azure (Intermediate, 1 year)
 
 infrastructure_as_code:
-  - Terraform (Expert, 3 years)
-  - Ansible (Advanced, 2 years)
+  - Terraform (Intermediate, 1 year)
+  - Ansible (Intermediate, 1 year)
 
 container_orchestration:
-  - Kubernetes (Expert, 3 years)
-  - Docker (Expert, 4 years)
-  - Helm (Advanced, 2 years)`;
+  - Kubernetes (Intermediate, 1 year)
+  - Docker (Intermediate, 1 year)
+  - Helm (Basic, 1 year)
+
+cicd_tools:
+  - Jenkins (Intermediate, 1 year)
+  - GitHub Actions (Intermediate, 1 year)
+
+monitoring:
+  - Prometheus (Basic, 1 year)
+  - Grafana (Basic, 1 year)`;
     }
     
     return `cat: ${file}: No such file or directory`;
@@ -345,17 +361,19 @@ container_orchestration:
     const resource = args[1];
 
     if (subCmd === 'get' && resource === 'experience') {
-      return `NAME         ROLE              DURATION         STATUS
-cloudsynk    DevOps Engineer   2023-Present     Active
-nexacore     Full-Stack Eng    2021-2022        Completed`;
+      return `NAME         ROLE                    DURATION         STATUS
+freelance    DevOps/Cloud Engineer   Nov 2024-Now     Active
+ibh          DevOps Intern           Aug-Oct 2024     Completed
+2iformation  Training Program        2023-2024        Completed`;
     }
 
     if (subCmd === 'get' && resource === 'skills') {
       return `NAME          PROFICIENCY    YEARS    READY
-kubernetes    Expert         3        ✓
-terraform     Expert         3        ✓
-aws           Expert         4        ✓
-docker        Expert         4        ✓`;
+kubernetes    Intermediate   1        ✓
+terraform     Intermediate   1        ✓
+aws           Intermediate   1        ✓
+docker        Intermediate   1        ✓
+ansible       Intermediate   1        ✓`;
     }
 
     return `kubectl ${args.join(' ')}: resource type not supported\nTry: kubectl get experience | kubectl get skills`;
@@ -396,10 +414,10 @@ Contact form available at Contact.app`;
 
   dockerCommand(args: string[]): string {
     if (args.length === 0 || args[0] === 'ps') {
-      return `CONTAINER ID   IMAGE           STATUS         PORTS                  NAMES
-a1b2c3d4e5f6   eks-platform    Up 2 years     0.0.0.0:443->443/tcp   production
-g7h8i9j0k1l2   observability   Up 1 year      0.0.0.0:3000->3000/tcp monitoring
-m3n4o5p6q7r8   iac-automation  Up 6 months    -                      terraform-runner`;
+      return `CONTAINER ID   IMAGE              STATUS         PORTS                  NAMES
+a1b2c3d4e5f6   devops-projects    Up 6 months    0.0.0.0:443->443/tcp   portfolio
+g7h8i9j0k1l2   training-env       Up 1 year      0.0.0.0:3000->3000/tcp 2i-formation
+m3n4o5p6q7r8   internship-app     Up 3 months    -                      ibh-projects`;
     }
 
     return `docker: '${args.join(' ')}' is not a recognized command`;
