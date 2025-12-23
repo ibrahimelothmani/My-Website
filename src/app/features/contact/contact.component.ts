@@ -126,14 +126,6 @@ import { AppwriteService } from '../../core/services/appwrite.service';
                 <div class="link-value mono">linkedin.com/in/ibrahimelothmani</div>
               </div>
             </a>
-
-            <a href="/cv/Ingénieur devops.pdf" download class="contact-link">
-              <span class="link-icon">📄</span>
-              <div class="link-content">
-                <div class="link-label">Download CV</div>
-                <div class="link-value mono">PDF Resume</div>
-              </div>
-            </a>
           </div>
         </div>
       </div>

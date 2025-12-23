@@ -227,63 +227,125 @@ export class ProjectsComponent {
   projects = signal<Project[]>([
     {
       id: '1',
-      title: 'EKS Microservices Platform',
-      description: 'Production-grade Kubernetes platform on AWS EKS for microservices architecture',
-      techStack: ['AWS EKS', 'Terraform', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
-      problem: 'Legacy monolithic application causing slow deployments, poor scalability, and high operational overhead.',
+      title: 'AI-Powered Cybersecurity Threat Detection System',
+      description: 'Comprehensive cybersecurity solution leveraging artificial intelligence to detect and mitigate real-time security threats through network traffic and system log analysis',
+      techStack: ['TensorFlow', 'Python', 'Kubernetes', 'Docker', 'Prometheus', 'Grafana', 'Ansible', 'Terraform'],
+      problem: 'Organizations face increasing sophisticated cyber threats that traditional signature-based detection systems fail to identify, leading to potential security breaches and data loss.',
+      solution: [
+        'Designed ML-based threat detection using TensorFlow for real-time network traffic analysis',
+        'Implemented containerized microservices architecture on Kubernetes for scalability',
+        'Created automated infrastructure deployment using Terraform and Ansible',
+        'Built comprehensive monitoring stack with Prometheus and Grafana',
+        'Developed CI/CD pipeline for continuous integration and deployment'
+      ],
+      impact: [
+        'Real-time threat detection with ML-powered analysis',
+        'Automated infrastructure provisioning reducing setup time by 70%',
+        'Scalable architecture handling millions of events per second',
+        'Production-ready monitoring and alerting system'
+      ],
+      github: 'https://github.com/ibrahimelothmani/AI-Powered-Cybersecurity-Threat-Detection-System'
+    },
+    {
+      id: '2',
+      title: 'Multi-Modal AI Agent Platform with RAG Integration',
+      description: 'Advanced AI agent platform leveraging Retrieval-Augmented Generation (RAG) for intelligent data retrieval and decision-making with multi-modal capabilities',
+      techStack: ['Java', 'Spring Boot', 'Langchain4J', 'OpenAI', 'RAG', 'Vector DB', 'PostgreSQL'],
+      problem: 'Traditional AI systems struggle with domain-specific knowledge and often provide outdated or inaccurate information without proper context retrieval.',
+      solution: [
+        'Integrated Langchain4J for AI agent orchestration and workflow management',
+        'Implemented Retrieval-Augmented Generation for enhanced context awareness',
+        'Leveraged OpenAI models for natural language processing and embeddings',
+        'Built vector database for efficient semantic search and retrieval',
+        'Created multi-modal data processing for text, documents, and structured data'
+      ],
+      impact: [
+        'Enhanced AI accuracy with domain-specific knowledge retrieval',
+        'Reduced hallucinations through factual grounding',
+        'Scalable architecture supporting multiple AI agents',
+        'Efficient semantic search with vector embeddings'
+      ],
+      github: 'https://github.com/ibrahimelothmani/Multi-Modal-AI-Agent-Platform-with-RAG-Integration'
+    },
+    {
+      id: '3',
+      title: 'Online Shopping Application - Microservices Architecture',
+      description: 'Full-stack e-commerce platform built with microservices architecture, featuring Spring Boot backend, Angular frontend, and complete DevOps pipeline',
+      techStack: ['Spring Boot', 'Spring Cloud', 'Angular', 'Docker', 'Kubernetes', 'Prometheus', 'Grafana', 'PostgreSQL'],
+      problem: 'Monolithic e-commerce systems suffer from scalability issues, difficult deployments, and inability to scale individual components independently.',
+      solution: [
+        'Architected microservices-based system with Spring Boot and Spring Cloud',
+        'Implemented API Gateway for routing and load balancing',
+        'Built reactive Angular frontend with modern UI/UX',
+        'Containerized all services with Docker and orchestrated with Kubernetes',
+        'Deployed monitoring stack with Prometheus and Grafana for observability'
+      ],
+      impact: [
+        'Independent service scaling reducing costs by 40%',
+        'Zero-downtime deployments with Kubernetes rolling updates',
+        'Complete observability with metrics and distributed tracing',
+        'Production-ready microservices architecture'
+      ],
+      github: 'https://github.com/ibrahimelothmani/Online-Shopping-Application'
+    },
+    {
+      id: '4',
+      title: 'AWS EKS Microservices Platform',
+      description: 'Production-grade Kubernetes platform on AWS EKS with GitOps workflow and automated scaling for microservices architecture',
+      techStack: ['AWS EKS', 'Terraform', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'Karpenter'],
+      problem: 'Legacy monolithic application causing slow deployments, poor scalability, and high operational overhead with manual infrastructure management.',
       solution: [
         'Migrated monolith to microservices architecture on AWS EKS',
         'Infrastructure as Code with Terraform for repeatable deployments',
         'GitOps workflow using ArgoCD for automated application deployment',
         'Helm charts for standardized application packaging',
-        'Horizontal Pod Autoscaler (HPA) for dynamic scaling'
+        'Implemented Karpenter for intelligent cluster autoscaling'
       ],
       impact: [
         'Deployment time reduced from 2 hours to 10 minutes (92% improvement)',
         'Auto-scaling reduced compute costs by 40%',
         'Zero-downtime deployments achieved',
         'Team velocity increased by 3x'
-      ],
-      github: ''
-    },
-    {
-      id: '2',
-      title: 'Multi-Cloud IaC Automation',
-      description: 'Unified infrastructure automation across AWS and Azure using Terraform modules',
-      techStack: ['Terraform', 'AWS', 'Azure', 'Ansible', 'GitHub Actions', 'Vault'],
-      problem: 'Manual infrastructure provisioning across multiple clouds leading to inconsistencies, errors, and slow setup times.',
-      solution: [
-        'Created reusable Terraform modules for common infrastructure patterns',
-        'Implemented Terraform workspaces for environment separation',
-        'Automated secret management with HashiCorp Vault',
-        'CI/CD pipelines for infrastructure validation and deployment',
-        'Configuration management with Ansible for post-provisioning setups'
-      ],
-      impact: [
-        '95% of infrastructure now automated',
-        'Provisioning time reduced from days to hours',
-        'Eliminated 80% of manual configuration errors',
-        'Enabled disaster recovery with infrastructure versioning'
       ]
     },
     {
-      id: '3',
-      title: 'Observability & Monitoring Stack',
-      description: 'Comprehensive monitoring solution with Prometheus, Grafana, and Loki',
-      techStack: ['Prometheus', 'Grafana', 'Loki', 'Alertmanager', 'Kubernetes', 'Python'],
-      problem: 'Lack of visibility into system performance, slow incident response, and reactive firefighting.',
+      id: '5',
+      title: 'Multi-Cloud Infrastructure Automation',
+      description: 'Unified infrastructure automation across AWS and Azure using reusable Terraform modules and GitOps practices',
+      techStack: ['Terraform', 'AWS', 'Azure', 'Ansible', 'GitHub Actions', 'Vault', 'Atlantis'],
+      problem: 'Manual infrastructure provisioning across multiple clouds leading to inconsistencies, configuration drift, and slow environment setup times.',
       solution: [
-        'Deployed Prometheus for metrics collection from all services',
-        'Built custom Grafana dashboards for real-time insights',
-        'Implemented log aggregation with Loki',
-        'Created custom exporters for business metrics',
-        'Set up Alertmanager for intelligent alerting'
+        'Created reusable Terraform modules for common infrastructure patterns',
+        'Implemented Terraform workspaces for environment separation (dev/staging/prod)',
+        'Automated secret management with HashiCorp Vault',
+        'CI/CD pipelines with Atlantis for infrastructure validation and deployment',
+        'Configuration management with Ansible for post-provisioning automation'
+      ],
+      impact: [
+        '95% of infrastructure now automated and version-controlled',
+        'Provisioning time reduced from days to hours',
+        'Eliminated 80% of manual configuration errors',
+        'Enabled disaster recovery with infrastructure as code'
+      ]
+    },
+    {
+      id: '6',
+      title: 'Observability & Monitoring Stack',
+      description: 'Comprehensive monitoring and observability solution with Prometheus, Grafana, and Loki for production systems',
+      techStack: ['Prometheus', 'Grafana', 'Loki', 'Alertmanager', 'Kubernetes', 'Python', 'Thanos'],
+      problem: 'Lack of visibility into system performance, slow incident response times, and reactive firefighting instead of proactive monitoring.',
+      solution: [
+        'Deployed Prometheus for metrics collection from all services and infrastructure',
+        'Built custom Grafana dashboards for real-time insights and business metrics',
+        'Implemented centralized log aggregation with Loki',
+        'Created custom exporters for application-specific metrics',
+        'Set up Alertmanager with intelligent routing and PagerDuty integration'
       ],
       impact: [
         'Mean Time to Detection (MTTD) reduced by 70%',
         'Proactive issue resolution before customer impact',
         '99.9% uptime achieved and maintained',
-        'Enabled data-driven capacity planning'
+        'Enabled data-driven capacity planning and optimization'
       ]
     }
   ]);

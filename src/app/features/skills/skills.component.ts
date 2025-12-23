@@ -157,64 +157,62 @@ export class SkillsComponent {
       name: 'Cloud Platforms',
       icon: '☁️',
       skills: [
-        { name: 'AWS', category: 'cloud', proficiency: 5, yearsExperience: 4 },
-        { name: 'Azure', category: 'cloud', proficiency: 4, yearsExperience: 2 },
-        { name: 'GCP', category: 'cloud', proficiency: 3, yearsExperience: 1 }
+        { name: 'AWS', category: 'cloud', proficiency: 2, yearsExperience: 1 },
+        { name: 'Azure', category: 'cloud', proficiency: 2, yearsExperience: 1 },
       ]
     },
     {
       name: 'Infrastructure as Code',
       icon: '🏗️',
       skills: [
-        { name: 'Terraform', category: 'iac', proficiency: 5, yearsExperience: 3 },
-        { name: 'Ansible', category: 'iac', proficiency: 4, yearsExperience: 2 },
-        { name: 'CloudFormation', category: 'iac', proficiency: 3, yearsExperience: 1 }
+        { name: 'Terraform', category: 'iac', proficiency: 2, yearsExperience: 1 },
+        { name: 'Ansible', category: 'iac', proficiency: 2, yearsExperience: 1 },
+        { name: 'CloudFormation', category: 'iac', proficiency: 2, yearsExperience: 1 }
       ]
     },
     {
       name: 'Container & Orchestration',
       icon: '🐳',
       skills: [
-        { name: 'Kubernetes', category: 'container', proficiency: 5, yearsExperience: 3 },
-        { name: 'Docker', category: 'container', proficiency: 5, yearsExperience: 4 },
-        { name: 'Helm', category: 'container', proficiency: 4, yearsExperience: 2 }
+        { name: 'Kubernetes', category: 'container', proficiency: 2, yearsExperience: 1 },
+        { name: 'Docker', category: 'container', proficiency: 2, yearsExperience: 1 },
+        { name: 'Helm', category: 'container', proficiency: 2, yearsExperience: 1 }
       ]
     },
     {
       name: 'CI/CD',
       icon: '🔄',
       skills: [
-        { name: 'Jenkins', category: 'cicd', proficiency: 4, yearsExperience: 3 },
-        { name: 'GitHub Actions', category: 'cicd', proficiency: 4, yearsExperience: 2 },
-        { name: 'ArgoCD', category: 'cicd', proficiency: 4, yearsExperience: 2 },
-        { name: 'GitLab CI', category: 'cicd', proficiency: 3, yearsExperience: 1 }
+        { name: 'Jenkins', category: 'cicd', proficiency: 2, yearsExperience: 1 },
+        { name: 'GitHub Actions', category: 'cicd', proficiency: 2, yearsExperience: 1 },
+        { name: 'ArgoCD', category: 'cicd', proficiency: 2, yearsExperience: 1 },
+        { name: 'GitLab CI', category: 'cicd', proficiency: 2, yearsExperience: 1 }
       ]
     },
     {
       name: 'Observability',
       icon: '📊',
       skills: [
-        { name: 'Prometheus', category: 'observability', proficiency: 4, yearsExperience: 2 },
-        { name: 'Grafana', category: 'observability', proficiency: 4, yearsExperience: 2 },
-        { name: 'Loki', category: 'observability', proficiency: 3, yearsExperience: 1 },
-        { name: 'ELK Stack', category: 'observability', proficiency: 3, yearsExperience: 1 }
+        { name: 'Prometheus', category: 'observability', proficiency: 2, yearsExperience: 1 },
+        { name: 'Grafana', category: 'observability', proficiency: 2, yearsExperience: 1 },
+        { name: 'Loki', category: 'observability', proficiency: 2, yearsExperience: 1 },
+        { name: 'ELK Stack', category: 'observability', proficiency: 2, yearsExperience: 1 }
       ]
     },
     {
       name: 'Security & Secrets',
       icon: '🔐',
       skills: [
-        { name: 'HashiCorp Vault', category: 'security', proficiency: 4, yearsExperience: 2 },
-        { name: 'SOPS', category: 'security', proficiency: 3, yearsExperience: 1 }
+        { name: 'HashiCorp Vault', category: 'security', proficiency: 2, yearsExperience: 1 },
+        { name: 'SOPS', category: 'security', proficiency: 2, yearsExperience: 1 }
       ]
     },
     {
       name: 'Programming & Scripting',
       icon: '💻',
       skills: [
-        { name: 'Python', category: 'programming', proficiency: 4, yearsExperience: 3 },
-        { name: 'Bash', category: 'programming', proficiency: 5, yearsExperience: 4 },
-        { name: 'Go', category: 'programming', proficiency: 3, yearsExperience: 1 }
+        { name: 'Python', category: 'programming', proficiency: 2, yearsExperience: 1 },
+        { name: 'Bash', category: 'programming', proficiency: 2, yearsExperience: 1 },
       ]
     }
   ]);

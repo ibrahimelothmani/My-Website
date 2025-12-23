@@ -251,43 +251,85 @@ export class ExperienceComponent {
   experiences = signal<Experience[]>([
     {
       id: '1',
-      company: 'CloudSynk',
-      role: 'Cloud & DevOps Engineer',
-      duration: '2023 - Present',
-      technologies: ['AWS', 'Azure', 'Terraform', 'Kubernetes', 'Jenkins', 'ArgoCD', 'Prometheus', 'Grafana', 'Python', 'Bash'],
+      company: 'Freelance Platforms (Upwork, Toptal, Freelance.tn)',
+      role: 'DevOps/Cloud Engineer',
+      duration: 'November 2024 - Present',
+      technologies: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Jenkins', 'GitHub Actions', 'Prometheus', 'Grafana'],
       responsibilities: [
-        'Architected and deployed multi-region EKS clusters for microservices',
-        'Implemented GitOps workflows using ArgoCD and Helm',
-        'Built comprehensive observability stack with Prometheus, Grafana, and Loki',
-        'Automated infrastructure provisioning reducing deployment time by 60%',
-        'Designed and implemented CI/CD pipelines for 20+ applications',
-        'Managed cloud costs and optimized resource utilization'
+        'Providing DevOps and cloud infrastructure services to international clients',
+        'Building CI/CD pipelines and automate deployment workflows',
+        'Setting up Kubernetes clusters and container orchestration',
+        'Implementing infrastructure as code with Terraform and Ansible',
+        'Deploying monitoring and observability solutions',
+        'Consulting on DevOps best practices and cloud migration strategies'
       ],
       metrics: [
-        { label: '⬇️ Deployment Time', value: '-60%' },
-        { label: '⬆️ Uptime', value: '99.9%' },
-        { label: '💰 Cost Savings', value: '$50k+/yr' },
-        { label: '🤖 Automation', value: '95%' }
+        { label: '💼 Active Projects', value: '3+' },
+        { label: '🌍 Clients', value: 'International' },
+        { label: '🎯 Focus', value: 'Cloud/DevOps' }
       ],
       expanded: true
     },
     {
       id: '2',
-      company: 'NexaCore Solutions',
-      role: 'Full-Stack Engineer',
-      duration: '2021 - 2022',
-      technologies: ['Angular', 'Spring Boot', 'Docker', 'PostgreSQL', 'AWS', 'GitHub Actions'],
+      company: 'IBH Ibn Alhaytham',
+      role: 'DevOps Engineer (Intern)',
+      duration: 'August 2024 - October  2024',
+      technologies: ['Docker', 'Kubernetes', 'Jenkins', 'Git', 'Linux', 'Bash', 'Prometheus', 'Grafana'],
       responsibilities: [
-        'Developed full-stack applications using Angular and Spring Boot',
-        'Containerized applications and managed Docker deployments',
-        'Set up CI/CD pipelines with GitHub Actions',
-        'Implemented RESTful APIs and database optimization',
-        'Collaborated with cross-functional teams on feature delivery'
+        'Implemented Docker containerization for microservices applications',
+        'Assisted in Kubernetes cluster setup for dev and staging environments',
+        'Contributed to CI/CD pipeline improvements using Jenkins and GitHub Actions',
+        'Participated in infrastructure monitoring setup with Prometheus and Grafana',
+        'Collaborated with development teams on deployment automation',
+        'Documented infrastructure processes and deployment procedures'
       ],
       metrics: [
-        { label: '🚀 Features Delivered', value: '50+' },
-        { label: '⚡ API Performance', value: '+40%' },
-        { label: '👥 Team Size', value: '8 people' }
+        { label: '📦 Containerized Apps', value: '5+' },
+        { label: '⏱️ Duration', value: '3 months' },
+        { label: '🎓 Learning', value: 'Hands-on' }
+      ],
+      expanded: false
+    },
+    {
+      id: '3',
+      company: '2i Formation',
+      role: 'Full Stack & DevOps/Cloud Training',
+      duration: '2023 - 2024',
+      technologies: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Spring Boot', 'Angular', 'Java', 'Python'],
+      responsibilities: [
+        'Completed intensive training in cloud platforms (AWS, Azure)',
+        'Gained hands-on experience with Kubernetes and Docker orchestration',
+        'Learned Infrastructure as Code using Terraform and Ansible',
+        'Built full-stack applications with Spring Boot and Angular',
+        'Mastered CI/CD pipelines and DevOps workflows',
+        'Completed multiple real-world DevOps projects from scratch'
+      ],
+      metrics: [
+        { label: '📚 Program', value: 'Professional' },
+        { label: '⏱️ Duration', value: '1 year' },
+        { label: '🎯 Skills', value: 'Full Stack + DevOps' }
+      ],
+      expanded: false
+    },
+    {
+      id: '4',
+      company: 'University',
+      role: 'Civil Engineering Degree',
+      duration: '2020',
+      technologies: [],
+      responsibilities: [
+        'Graduated with B.Sc. in Civil Engineering',
+        'Developed strong analytical and problem-solving capabilities',
+        'Gained project planning and management experience',
+        'Recognized the potential of tech and automation',
+        'Decided to transition career from civil to software engineering',
+        'Applied engineering principles to infrastructure design'
+      ],
+      metrics: [
+        { label: '🎓 Degree', value: 'B.Sc.' },
+        { label: '📐 Field', value: 'Civil Eng.' },
+        { label: '💡 Pivot', value: 'To Tech' }
       ],
       expanded: false
     }

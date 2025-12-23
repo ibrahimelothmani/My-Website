@@ -23,8 +23,8 @@ import { CommonModule } from '@angular/common';
               <span class="text-green mono">$</span> whoami
             </h1>
             <h2 class="name">Ibrahim El Othmani</h2>
-            <p class="role text-blue">Cloud & DevOps Engineer</p>
-            <p class="company text-secondary">@ CloudSynk</p>
+            <p class="role text-blue">Full Stack / DevOps/Cloud Engineer</p>
+            <p class="company text-secondary">💼 Open to Work | Remote Available</p>
 
             <div class="location-badge">
               <span class="location-icon">📍</span>
@@ -38,27 +38,28 @@ import { CommonModule } from '@angular/common';
           <h3 class="section-title mono text-green">$ cat ~/bio.txt</h3>
           <div class="bio-content">
             <p class="bio-text">
-              Passionate <strong class="text-blue">Cloud & DevOps Engineer</strong> with <strong>3+ years</strong> of hands-on experience 
-              in building and scaling cloud-native infrastructure. I specialize in <strong class="text-green">Kubernetes orchestration</strong>, 
-              <strong class="text-green">multi-cloud architecture</strong> (AWS, Azure, GCP), and <strong class="text-green">Infrastructure as Code</strong>.
+              <strong class="text-blue">DevOps/Cloud Engineer</strong> with a unique background: <strong>Civil Engineering degree (2020)</strong> 
+              → Career transition to tech → Professional training at <strong class="text-green">2i Formation (2023-2024)</strong>. 
+              I completed a <strong>DevOps internship at IBH Ibn Alhaytham (Aug-Oct 2024)</strong> and now work as a <strong class="text-green">freelance DevOps engineer</strong> serving international clients.
             </p>
             <p class="bio-text">
-              My expertise lies in automating everything—from CI/CD pipelines to infrastructure provisioning—using tools like 
-              <span class="highlight">Terraform</span>, <span class="highlight">Ansible</span>, <span class="highlight">Jenkins</span>, 
-              and <span class="highlight">ArgoCD</span>. I've successfully <strong>reduced deployment times by 60%</strong>, achieved 
-              <strong class="text-blue">99.9% uptime</strong>, and saved organizations <strong>$50k+ annually</strong> through 
-              intelligent automation and cost optimization.
+              I specialize in <strong class="text-green">Kubernetes orchestration</strong>, 
+              <strong class="text-green">multi-cloud architecture</strong> (AWS, Azure), and <strong class="text-green">Infrastructure as Code</strong>. 
+              My toolkit includes <span class="highlight">Terraform</span>, <span class="highlight">Ansible</span>, <span class="highlight">Docker</span>, 
+              <span class="highlight">Jenkins</span>, and <span class="highlight">Prometheus/Grafana</span> for building automated, 
+              scalable infrastructure solutions.
             </p>
             <p class="bio-text">
-              I believe in treating infrastructure as code, monitoring relentlessly, and deploying fearlessly. My mission is to 
-              bridge the gap between development and operations, enabling teams to ship faster while maintaining rock-solid reliability.
+              From designing bridges in civil engineering to building bridges between development and operations, my mission is to 
+              automate infrastructure, enable continuous delivery, and help teams ship faster with confidence. Currently seeking 
+              <strong class="text-blue">full-time DevOps/Cloud opportunities</strong> where I can contribute to scaling cloud-native systems.
             </p>
           </div>
 
           <!-- Philosophy Quote -->
           <blockquote class="philosophy-quote">
             <span class="quote-icon text-green">"</span>
-            <p class="mono">Automate everything. Monitor relentlessly.<br>Deploy fearlessly. Scale infinitely.</p>
+            <p class="mono">From Civil Engineering to Cloud Engineering.<br>Building bridges between code and infrastructure.</p>
             <span class="quote-icon text-green">"</span>
           </blockquote>
         </div>
@@ -67,23 +68,23 @@ import { CommonModule } from '@angular/common';
         <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-icon">⚡</div>
-            <div class="stat-value text-green">3+</div>
-            <div class="stat-label">Years Experience</div>
+            <div class="stat-value text-green">1 Year</div>
+            <div class="stat-label">DevOps Experience</div>
           </div>
           <div class="stat-card">
             <div class="stat-icon">🚀</div>
-            <div class="stat-value text-blue">20+</div>
-            <div class="stat-label">Production Deployments</div>
+            <div class="stat-value text-blue">6+</div>
+            <div class="stat-label">DevOps Projects</div>
           </div>
           <div class="stat-card">
             <div class="stat-icon">☁️</div>
-            <div class="stat-value text-purple">3</div>
+            <div class="stat-value text-purple">2</div>
             <div class="stat-label">Cloud Platforms</div>
           </div>
           <div class="stat-card">
-            <div class="stat-icon">🎯</div>
-            <div class="stat-value text-green">99.9%</div>
-            <div class="stat-label">Uptime Achieved</div>
+            <div class="stat-icon">💼</div>
+            <div class="stat-value text-green">Open</div>
+            <div class="stat-label">To Work</div>
           </div>
         </div>
 

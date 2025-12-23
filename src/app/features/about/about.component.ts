@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
         
         <div class="info-grid">
           <div class="info-row">
-            <span class="label text-blue">user@devops-os</span>
+            <span class="label text-blue">ibrahim@devops-os</span>
             <span class="separator">─────────────</span>
           </div>
           <div class="info-row">
@@ -30,7 +30,11 @@ import { CommonModule } from '@angular/common';
           </div>
           <div class="info-row">
             <span class="key text-green">Host:</span>
-            <span class="value">CloudSynk Platform</span>
+            <span class="value">Freelance DevOps Engineer 🚀</span>
+          </div>
+          <div class="info-row">
+            <span class="key text-green">Status:</span>
+            <span class="value text-blue">💼 Open to Work</span>
           </div>
           <div class="info-row">
             <span class="key text-green">Kernel:</span>
@@ -58,7 +62,11 @@ import { CommonModule } from '@angular/common';
           </div>
           <div class="info-row">
             <span class="key text-green">Location:</span>
-            <span class="value">Tunisia 🇹🇳</span>
+            <span class="value">Tunisia 🇹🇳 (Remote Available)</span>
+          </div>
+          <div class="info-row">
+            <span class="key text-green">Platforms:</span>
+            <span class="value">Upwork, Toptal, Freelance.tn</span>
           </div>
         </div>
       </div>
@@ -67,8 +75,8 @@ import { CommonModule } from '@angular/common';
       <div class="philosophy-section">
         <h3 class="section-title text-blue">$ cat philosophy.txt</h3>
         <blockquote class="philosophy-text text-primary">
-          "Automate everything. Monitor relentlessly.<br>
-           Deploy fearlessly. Scale infinitely."
+          "From Civil Engineering to Cloud Engineering.<br>
+           Building bridges between code and infrastructure."
         </blockquote>
       </div>
 
@@ -78,7 +86,7 @@ import { CommonModule } from '@angular/common';
         <ul class="strengths-list">
           <li class="strength-item">
             <span class="icon text-purple">▸</span>
-            <span>Multi-cloud architecture (AWS, Azure, GCP)</span>
+            <span>Multi-cloud architecture (AWS, Azure)</span>
           </li>
           <li class="strength-item">
             <span class="icon text-purple">▸</span>
@@ -105,15 +113,23 @@ import { CommonModule } from '@angular/common';
         <div class="timeline">
           <div class="timeline-item">
             <span class="commit-hash text-green">a1b2c3d</span>
-            <span class="commit-msg">2023-Present: Cloud & DevOps Engineer @ CloudSynk</span>
+            <span class="commit-msg">2024-Present: Freelance DevOps/Cloud Engineer</span>
+          </div>
+          <div class="timeline-item">
+            <span class="commit-hash text-blue">b2c3d4e</span>
+            <span class="commit-msg">Aug-Oct 2024: DevOps Intern @ IBH Ibn Alhaytham</span>
+          </div>
+          <div class="timeline-item">
+            <span class="commit-hash text-green">c3d4e5f</span>
+            <span class="commit-msg">2023-2024: Full Stack / DevOps & Cloud Training @ 2i Formation</span>
+          </div>
+          <div class="timeline-item">
+            <span class="commit-hash text-purple">e5f6g7h</span>
+            <span class="commit-msg">2020-2023: Career transition to Tech</span>
           </div>
           <div class="timeline-item">
             <span class="commit-hash text-green">d4e5f6g</span>
-            <span class="commit-msg">2021-2022: Full-Stack Engineer @ NexaCore Solutions</span>
-          </div>
-          <div class="timeline-item">
-            <span class="commit-hash text-green">h7i8j9k</span>
-            <span class="commit-msg">2020-2021: Leveling up in DevOps & Cloud technologies</span>
+            <span class="commit-msg">2020: B.Sc. Civil Engineering</span>
           </div>
         </div>
       </div>
@@ -261,7 +277,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent {
  calculateUptime(): string {
-    const startDate = new Date('2021-01-01');
+    const startDate = new Date('2024-04-01');
     const now = new Date();
     const diffTime = Math.abs(now.getTime() - startDate.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
