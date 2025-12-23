@@ -443,16 +443,76 @@ import { AppwriteService } from '../../core/services/appwrite.service';
     }
 
     @media (max-width: 768px) {
+      .contact-container {
+        padding: var(--space-4);
+      }
+
+      .page-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-4);
+      }
+
       .contact-grid-layout {
         grid-template-columns: 1fr;
+        gap: var(--space-4);
       }
 
       .contact-form {
         padding: var(--space-4);
       }
 
+      .form-group input,
+      .form-group textarea {
+        padding: 14px;
+        font-size: 16px; /* Prevent iOS zoom */
+        min-height: 48px; /* Touch-friendly */
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+      }
+
+      .submit-button {
+        padding: 16px;
+        font-size: 16px;
+        min-height: 52px; /* Large touch target */
+      }
+
       .info-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-3);
+      }
+
+      .info-item {
+        padding: 14px;
+      }
+
+      .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+      }
+
+      .info-text a {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-container {
+        padding: var(--space-3);
+      }
+
+      .page-title {
+        font-size: var(--font-size-lg);
+      }
+
+      .contact-form {
+        padding: var(--space-3);
+      }
+
+      .form-group {
+        margin-bottom: var(--space-4);
       }
     }
   `]

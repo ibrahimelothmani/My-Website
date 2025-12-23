@@ -308,51 +308,116 @@ import { LandingComponent } from '../../../features/landing/landing.component';
     }
 
     /* Responsive Design */
-    @media (max-width: 768px) {
+    /* Tablet: 768px - 1024px */
+    @media (max-width: 1024px) {
       .sidebar {
-        width: 220px;
+        width: 200px;
       }
 
       .main-content {
-        left: 220px;
-        width: calc(100vw - 220px);
+        left: 200px;
+        width: calc(100vw - 200px);
       }
 
       .windows-container {
-        left: 220px;
-        width: calc(100vw - 220px);
+        left: 200px;
+        width: calc(100vw - 200px);
       }
 
-      .menu-item {
-        padding: var(--space-3) var(--space-4);
-      }
-
-      .menu-icon {
-        width: 40px;
-        height: 40px;
-        font-size: var(--font-size-2xl);
-      }
-
-      .menu-label {
-        font-size: var(--font-size-xs);
+      .window {
+        max-width: 90vw !important;
+        max-height: 90vh !important;
       }
     }
 
-    @media (max-width: 480px) {
+    /* Mobile: < 768px */
+    @media (max-width: 768px) {
+      /* Hide sidebar by default on mobile */
       .sidebar {
-        width: 70px;
+        position: fixed;
+        width: 280px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
       }
 
+      .sidebar:not(.sidebar-hidden) {
+        transform: translateX(0);
+      }
+
+      /* Add backdrop when sidebar is open */
+      .sidebar:not(.sidebar-hidden)::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 280px;
+        width: calc(100vw - 280px);
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+
+      /* Main content fills screen on mobile */
       .main-content {
-        left: 70px;
-        width: calc(100vw - 70px);
+        left: 0 !important;
+        width: 100vw !important;
       }
 
+      /* Windows fill screen on mobile */
       .windows-container {
-        left: 70px;
-        width: calc(100vw - 70px);
+        left: 0 !important;
+        width: 100vw !important;
       }
 
+      .window {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: calc(100vh - var(--taskbar-height)) !important;
+        max-width: 100vw !important;
+        max-height: calc(100vh - var(--taskbar-height)) !important;
+        border-radius: 0 !important;
+        transform: none !important;
+      }
+
+      .window-header {
+        cursor: default;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      /* Adjust menu items for touch */
+      .menu-item {
+        padding: var(--space-4);
+        min-height: 56px;
+      }
+
+      .menu-icon {
+        width: 44px;
+        height: 44px;
+        font-size: var(--font-size-3xl);
+      }
+
+      .menu-label {
+        font-size: var(--font-size-sm);
+      }
+    }
+
+    /* Small Mobile: < 480px */
+    @media (max-width: 480px) {
+      /* Icon-only sidebar */
+      .sidebar {
+        width: 72px;
+      }
+
+      .sidebar::before {
+        left: 72px !important;
+        width: calc(100vw - 72px) !important;
+      }
+
+      /* Hide text labels */
       .sidebar-header h2,
       .sidebar-subtitle,
       .menu-label,
@@ -363,10 +428,22 @@ import { LandingComponent } from '../../../features/landing/landing.component';
       .menu-item {
         justify-content: center;
         padding: var(--space-3);
+        min-height: 64px;
       }
 
       .menu-content {
         display: none;
+      }
+
+      .menu-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 28px;
+      }
+
+      /* Taskbar adjustments */
+      .taskbar {
+        padding: 0 var(--space-2);
       }
     }
   `]

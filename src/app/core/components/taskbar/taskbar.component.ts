@@ -226,18 +226,34 @@ import { WindowManagerService } from '../../services/window-manager.service';
     @media (max-width: 480px) {
       .taskbar {
         height: 44px;
+        padding: 0 4px;
       }
 
       .taskbar-left {
-        gap: var(--space-2);
+        gap: var(--space-1);
       }
 
       .taskbar-right {
-        gap: var(--space-2);
+        gap: var(--space-1);
       }
 
+      /* Keep menu button visible - it's essential for navigation! */
       .menu-btn {
+        min-width: 44px;
+        height: 44px;
+        padding: 0;
+        font-size: 20px;
+      }
+
+      /* Hide theme toggle to save space */
+      .theme-btn {
         display: none;
+      }
+
+      .clock {
+        font-size: 10px;
+        min-width: 45px;
+        padding: 4px;
       }
     }
   `]
